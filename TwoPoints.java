@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 public class TwoPoints {
     public static void main(String[] args) {
-        computePointOfInterception(2, 4);
-        //computePointOfInterception(12, 4);
-        //computePointOfInterception(8, 4);
-        //computePointOfInterception(2, 9);
+        System.out.print("Enter first node(1-12) : ");
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        System.out.print("Enter second node(1-12) : ");
+        Scanner sc1 = new Scanner(System.in);
+        int y = sc1.nextInt();
+        computePointOfInterception(x, y);
+
     }
     public static int computePointOfInterception(int x, int y) {
         circularLinkedList circle = new circularLinkedList();
@@ -26,7 +32,7 @@ public class TwoPoints {
             PointerY = PointerY.nextNode;
         }
         //System.out.println("First Point of Intersection : "+PointerX.value);
-        System.out.println(PointerX.value);
+        System.out.println("Node at which both nodes meet : "+PointerX.value);
         return 0;
     }
 }

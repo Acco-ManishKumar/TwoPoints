@@ -2,12 +2,17 @@ import java.util.Scanner;
 
 public class TwoPoints {
     public static void main(String[] args) {
-        System.out.print("Enter first node(1-12) : ");
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        System.out.print("Enter second node(1-12) : ");
-        Scanner sc1 = new Scanner(System.in);
-        int y = sc1.nextInt();
+        int x,y;
+        do {
+            System.out.print("Enter first node(1-12) : ");
+            Scanner sc = new Scanner(System.in);
+            x = sc.nextInt();
+        }while (x > 12  || x <1);
+        do {
+            System.out.print("Enter second node(1-12) : ");
+            Scanner sc1 = new Scanner(System.in);
+            y = sc1.nextInt();
+        }while(y > 12 || y < 1);
         computePointOfInterception(x, y);
 
     }
